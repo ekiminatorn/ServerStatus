@@ -58,4 +58,4 @@ $stats['all_servers'] = $allServers;
 array_push($stats, $individualServers);
 
 
-file_put_contents('json/murmur-stats.json', json_encode($stats));
+file_put_contents(__DIR__ . '/json/murmur-stats.json', json_encode($stats));
