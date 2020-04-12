@@ -19,6 +19,7 @@ function getStats($host, $login)
 
     $response = curl_exec($ch);
     $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
 
     $response = json_decode($response, true);
 
