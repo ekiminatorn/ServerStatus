@@ -2,16 +2,37 @@ var firstLoad = true;
 getData();
 
 function getData(){
-$.getJSON("json/murmur-stats.json", function(result){
+$.getJSON("https://tyr.voicepacket.net/ServerStatus/json/murmur-stats.json", function(result){
 
     totalUsers = result['users_online'];
     allBootedServers = result['booted_servers'];
     allServers = result['all_servers'];
 
     oldServerCount = $("#total-booted-servers").text();
+    oldTotServCount = $("#total-servers").text();
+    oldTotUsersCount = $("#total-users").text();
+
     if(firstLoad === false){
         if (oldServerCount >= 4 && oldServerCount < allBootedServers){
             toastr["info"]("New server created! <br><br><br>")
+            $("#booted-stats-box").addClass('animation-target');
+            setTimeout(function(){
+                $("#booted-stats-box").removeClass('animation-target');
+            },2000);
+        }
+
+        if(oldServerCount >= 4 && oldTotServCount < allServers){
+            $("#total-servers-stats-box").addClass('animation-target');
+            setTimeout(function(){
+                $("#total-servers-stats-box").removeClass('animation-target');
+            },2000);
+        }
+
+        if(oldServerCount >= 4 && oldTotUsersCount < totalUsers){
+            $("#total-users-stats-box").addClass('animation-target');
+            setTimeout(function(){
+                $("#total-users-stats-box").removeClass('animation-target');
+            },2000);
         }
     }
     firstLoad = false;
