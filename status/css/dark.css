@@ -46,6 +46,7 @@ tr.odd.expandRow > :hover { background: #000 !important; }
 .stats-box{
     background-color: rgb(58, 58, 58);
     position: relative;
+    flex-grow: 1;
     display: flex;
     margin: 10px;
     min-height: 30px;
@@ -91,13 +92,19 @@ tr.odd.expandRow > :hover { background: #000 !important; }
 
 .aqua{background-color: rgb(15, 89, 150);}
 .green{background-color: rgb(21, 121, 21);}
-.somecolor{background-color:rgb(139, 177, 34);}
+.somecolor{background-color:rgb(174, 177, 34);}
 .purple{background-color: rgb(109, 21, 121);}
 
+.grid-container{
+    display: flex;
+    flex-direction: row;
+}
+/*
 .grid-container{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
+*/
 
 @media only screen and (max-width: 450px) {
 	body								{ font-size: 10px; }
