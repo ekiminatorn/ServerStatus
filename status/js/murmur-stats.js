@@ -2,7 +2,7 @@ var firstLoad = true;
 getData();
 
 function getData(){
-$.getJSON("https://tyr.voicepacket.net/ServerStatus/json/murmur-stats.json", function(result){
+$.getJSON("json/murmur-stats.json", function(result){
 
     totalUsers = result['users_online'];
     allBootedServers = result['booted_servers'];
