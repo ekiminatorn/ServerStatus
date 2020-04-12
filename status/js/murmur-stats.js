@@ -11,7 +11,7 @@ $.getJSON("json/murmur-stats.json", function(result){
     oldServerCount = $("#total-booted-servers").text();
     if(firstLoad === false){
         if (oldServerCount >= 4 && oldServerCount < allBootedServers){
-            toastr["info"]("New server created!")
+            toastr["info"]("New server created! <br><br><br>")
         }
     }
     firstLoad = false;
@@ -67,7 +67,7 @@ window.setInterval(function(){
     "onclick": null,
     "showDuration": "300",
     "hideDuration": "1000",
-    "timeOut": "5000",
+    "timeOut": "10000",
     "extendedTimeOut": "1000",
     "showEasing": "swing",
     "hideEasing": "linear",
