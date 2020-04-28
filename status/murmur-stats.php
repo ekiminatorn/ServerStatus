@@ -1,5 +1,9 @@
 <?php
 
+##
+# This is run by cron
+##
+
 include "settings.php";
 
 function getStats($host, $login)

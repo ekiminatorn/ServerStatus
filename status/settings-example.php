@@ -13,3 +13,7 @@ $config['hosts'] = array(
         "apiLogin" => "username:password",
     ),
 );
+
+#Pushover Glances API
+$config['pushover']['userKey'] = "User key";
+$config['pushover']['appToken'] = "App Token";
